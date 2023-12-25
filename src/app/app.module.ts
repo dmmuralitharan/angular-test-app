@@ -12,7 +12,10 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([{ path: '', component: ProductListComponent }]),
+    RouterModule.forRoot([
+    { path: '', component: ProductListComponent },
+    { path: 'products/:productId', component: ProductDetailsComponent },
+  ]),
   ],
   declarations: [
     AppComponent,
@@ -23,7 +26,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
 
 /*
 Copyright Google LLC. All Rights Reserved.
